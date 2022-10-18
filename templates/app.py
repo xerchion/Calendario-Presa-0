@@ -71,7 +71,18 @@ def index():
     return render_template("index.html",formulario=datosCalendario,year=year,turno=turno,colores=colores,nombre=nombreUsuario)
 # ruta de pruebas
 
+@app.route('/pruebas', methods=['GET', 'POST'])
+def pruebas():
+    #flash("federico")
+    print("aqui llega a PRUEBAS")
+    import formularios
+    datosCalendario=formularios.Datos(request.form)
+    if request.method=='POST' and datosCalendario.validate(): #el llamar a validate, parece estar obsoleto, ya lo hace en el formulario
+        #flash(datosCalendario.nombre.data)
+        pass
+    
 
+    return render_template("pruebas.html",datos=datosCalendario)
 
 
 
