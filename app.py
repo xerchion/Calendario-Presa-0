@@ -1,9 +1,7 @@
 
-from flask import Flask, render_template, request, redirect, session, url_for,flash
+from flask import Flask, render_template, request
 
 from datetime import date
-import time
-
 import formularios
 turno=""
 year=date.today().year
@@ -25,24 +23,11 @@ def index():
         
    
 
-    return render_template("index.html",formulario=datosCalendario,year=year,turno=turno,colores=colores,nombre=nombreUsuario)
-
-
-
-
-
-
-
-
-
-
-
-
-
+    return render_template("index.html",formulario=datosCalendario,year=year,turno=turno,colores="green",nombre=nombreUsuario)
 
 # fin iniciar sesion
 if __name__=="__main__":
-    app.run(debug=False)
+    app.run(debug=True)
 
 
 
