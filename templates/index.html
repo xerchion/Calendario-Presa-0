@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+
+
+{% block contenido %}
+
+{% from 'macro.html' import render_field %}
+
+
+ <!-- Este es el formulario Nuevo -->
+<form action="{{ url_for('anual') }}" method="POST">
+ 
+  <h1 class="text-center"">  </h1>
+  <div class="container ">
+
+    <h1 class="text-center">Datos Calendario </h1> 
+    <h1 class="text-center"">  </h1>
+    <div class="row"> 
+      <div class="col-2"> </div> 
+      <div class="col-2"></div>
+      
+      
+      <div class="col-4">
+        {{ render_field(formulario.turno,class="form-control form-select") }}
+        {{ render_field(formulario.year,class="form-control form-select") }}            
+        <button type="submit"  class="btn btn-primary">Ver calendario</button>
+      </div>
+      <div class="row-cols-5"> 
+        <div class="col-2"> 
+
+        </div>
+      </div> 
+
+</form>
+        
+          
+        
+      
+  
+ 
+
+
+
+
+{% endblock %}

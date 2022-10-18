@@ -1,0 +1,36 @@
+{% from 'macro.html' import render_field %}
+
+
+ <!-- Este es el formulario Nuevo -->
+<form action="{{ url_for('anual') }}" method="POST">
+ 
+  <div class="container ">
+    
+    <h4 class="text-center p-md-4">Elige un turno y un año</h4> 
+      
+    <div class="row-cols-8"> 
+      <div class="col-3">
+        
+        {{ render_field(formulario.turno,class="form-control form-select") }}
+        {{ render_field(formulario.year,class="form-control form-select") }}  
+      </div>
+      <div class="row-cols-5"> 
+        <div class="col-2"> 
+          <button type="submit"  class="btn btn-primary">Ver calendario</button>
+  <!--       <select required name="turno"  id="turno" class="form-select" aria-label="Default select example" required>
+          <option selected disabled>Elige un Turno</option>
+          <option class="text-bg-success" value="A">Tunro A</option>
+          <option class="text-bg-primary" value="B">Turno B</option>
+          <option class="text-bg-danger"  value="C">Turno C</option>
+          <option class="text-bg-warning" value="D">Turno D</option>
+          <option class="text-bg-warning bg-opacity-50" value="E">Turno E</option>
+  
+        </select>   -->    
+        </div>
+
+
+        
+      </div>
+    </div>
+  </div>
+</form>
