@@ -4,7 +4,7 @@ from flask import Flask,render_template
 app=Flask(__name__)
 
 #Creamos el index de la app, utilizando templates, en html desde la carpteta templates
-@app.route("/", methods=["POST"])
+@app.route("/")
 def index():
 
     return "hola"
