@@ -9,7 +9,7 @@ year=date.today().year
 app=Flask(__name__)
 
 #Creamos el index de la app, utilizando templates, en html desde la carpteta templates
-@app.route("/", methods=["POST","GET"])
+@app.route("/", methods=["POST"])
 def index():
     nombreUsuario="Invitado"
 
