@@ -1,10 +1,5 @@
 
-from flask import Flask, render_template, request
-
-from datetime import date
-import formularios
-turno=""
-year=date.today().year
+from flask import Flask,render_template
 
 app=Flask(__name__)
 
@@ -13,18 +8,13 @@ app=Flask(__name__)
 def index():
     nombreUsuario="Invitado"
 
-    datosCalendario=formularios.Datos(request.form)
+    
 
-    if request.method=='POST': #el llamar a validate, parece estar obsoleto, ya lo hace en el formulario
-        print("Soy index y llega por post")
-    else:
-        print("llega por otra cosa",year,turno)
         #validamos
         
    
 
-    return render_template("index.html",formulario=datosCalendario,year=year,turno=turno,colores="green",nombre=nombreUsuario)
-
+    return render_template("index.html",,year=2022,turno="C",colores="green",nombre="invitado")
 # fin iniciar sesion
 if __name__=="__main__":
     app.run(debug=True)
