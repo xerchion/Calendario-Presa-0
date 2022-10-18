@@ -1,21 +1,10 @@
-
-from flask import Flask,render_template
+from flask import Flask
 
 app=Flask(__name__)
 
-#Creamos el index de la app, utilizando templates, en html desde la carpteta templates
-@app.route("/")
+@app.route('/')
 def index():
+    return "hola mundo"
 
-    return "hola"
-# fin iniciar sesion
-if __name__=="__main__":
-    app.run(debug=True)
-
-
-
-
-
-    
-
-
+if __name__=='__main__':
+    app.run()
